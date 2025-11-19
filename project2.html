@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Narman david</a>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="project-card project-page">
+      <div class="project-hero">
+        <h2 class="project-title">Photography Collection</h2>
+      </div>
+
+      <div class="project-content">
+        <p>This collection showcases photos I took while learning composition and lighting.</p>
+
+        <div class="gallery photo-grid">
+          <img loading="lazy" src="images/pic1.jpg" alt="Photo 1" class="zoomable" tabindex="0" data-index="0">
+          <img loading="lazy" src="images/pic2.jpg" alt="Photo 2" class="zoomable" tabindex="0" data-index="1">
+          <img loading="lazy" src="images/pic3.jpg" alt="Photo 3" class="zoomable" tabindex="0" data-index="2">
+          <img loading="lazy" src="images/pic4.jpg" alt="Photo 4" class="zoomable" tabindex="0" data-index="3">
+          <img loading="lazy" src="images/pic5.jpg" alt="Photo 5" class="zoomable" tabindex="0" data-index="4">
+          <img loading="lazy" src="images/pic6.jpg" alt="Photo 6" class="zoomable" tabindex="0" data-index="5">
+          <img loading="lazy" src="images/pic7.jpg" alt="Photo 7" class="zoomable" tabindex="0" data-index="6">
+          <img loading="lazy" src="images/pic8.jpg" alt="Photo 8" class="zoomable" tabindex="0" data-index="7">
+          <img loading="lazy" src="images/pic9.jpg" alt="Photo 9" class="zoomable" tabindex="0" data-index="8">
+          <img loading="lazy" src="images/pic10.jpg" alt="Photo 10" class="zoomable" tabindex="0" data-index="9">
+          <img loading="lazy" src="images/pic11.jpg" alt="Photo 11" class="zoomable" tabindex="0" data-index="10">
+          <img loading="lazy" src="images/pic12.jpg" alt="Photo 12" class="zoomable" tabindex="0" data-index="11">
+        </div>
+
+        <p><a href="projects.html" class="btn back-btn">← Back to Projects</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year">2025</span> Narman david</p>
+    </div>
+  </footer>
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    <button class="lightbox-prev" aria-label="Previous image">‹</button>
+    <button class="lightbox-next" aria-label="Next image">›</button>
+    <img class="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" aria-hidden="false"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

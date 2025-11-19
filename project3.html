@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Programming Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Narman david</a>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="project-card project-page">
+      <div class="project-hero">
+        <h2 class="project-title">C Programming Projects</h2>
+      </div>
+
+      <div class="project-content">
+
+        <!-- Project 1 -->
+        <div class="c-project">
+          <h3>Project 1: Separate Even and Odd Numbers</h3>
+          <h4>Code</h4>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int array[100], evenArray[100], oddArray[100];
+    int n, i, evenCount = 0, oddCount = 0;
+
+    // Validate number of elements
+    do {
+        printf("Input the number of elements to be stored in the array (1-100): ");
+        scanf("%d", &n);
+        if (n &lt; 1 || n &gt; 100) {
+            printf("Invalid input! Please enter a number between 1 and 100.\n");
+        }
+    } while (n &lt; 1 || n &gt; 100);
+
+    // Input elements (index starting from 1)
+    for (i = 1; i &lt;= n; i++) {
+        printf("element - %d : ", i);
+        scanf("%d", &array[i]);
+    }
+
+    // Separate into even and odd arrays
+    for (i = 1; i &lt;= n; i++) {
+        if (array[i] % 2 == 0) {
+            evenArray[evenCount] = array[i];
+            evenCount++;
+        } else {
+            oddArray[oddCount] = array[i];
+            oddCount++;
+        }
+    }
+
+    // Print Even Array
+    printf("The elements of EvenArray are : ");
+    for (i = 0; i &lt; evenCount; i++) {
+        printf("%d ", evenArray[i]);
+    }
+    printf("\n");
+
+    // Print Odd Array
+    printf("The elements of OddArray are : ");
+    for (i = 0; i &lt; oddCount; i++) {
+        printf("%d ", oddArray[i]);
+    }
+    printf("\n");
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="c-project">
+          <h3>Project 2: Find Maximum and Minimum</h3>
+          <h4>Code</h4>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int array[100], n, i;
+    int max, min;
+
+    // Validate number of elements
+    do {
+        printf("Input the number of elements to be stored in the array (1-100): ");
+        scanf("%d", &n);
+        if (n &lt; 1 || n &gt; 100) {
+            printf("Invalid input! Please enter a number between 1 and 100.\n");
+        }
+    } while (n &lt; 1 || n &gt; 100);
+
+    // Input elements (index starting from 0)
+    for (i = 0; i &lt; n; i++) {
+        printf("element - %d : ", i + 1);
+        scanf("%d", &array[i]);
+    }
+
+    // Initialize max and min
+    max = array[0];
+    min = array[0];
+
+    // Find max and min
+    for (i = 1; i &lt; n; i++) {
+        if (array[i] &gt; max)
+            max = array[i];
+        if (array[i] &lt; min)
+            min = array[i];
+    }
+
+    // Output results
+    printf("Maximum element is : %d\n", max);
+    printf("Minimum element is : %d\n", min);
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="c-project">
+          <h3>Project 3: Grade Evaluation</h3>
+          <h4>Code</h4>
+          <pre><code>// Members: Avenido, Ciroy, Diabil, Piloton
+#include &lt;stdio.h&gt;
+
+int main() {
+    int grade;
+    int result;
+
+    do {
+        printf("Enter a grade (1-100) or 0 to exit: ");
+        result = scanf("%d", &grade);
+
+        if (result != 1) {
+            // Clear invalid input
+            while (getchar() != '\n');
+            printf("Please only input integers from 1-100.\n");
+            continue;
+        }
+
+        if (grade == 0) {
+            printf("Exiting...\n");
+            break;
+        }
+
+        if (grade &lt; 1 || grade &gt; 100) {
+            printf("Invalid input. Please enter a number between 1 and 100.\n");
+            continue;
+        }
+
+        // Grade evaluation
+        if (grade &gt;= 95) {
+            printf("With High Honors\n");
+        } else if (grade &gt;= 90) {
+            printf("With Honors\n");
+        } else if (grade &gt;= 75) {
+            printf("You Passed\n");
+        } else {
+            printf("You Failed\n");
+        }
+
+    } while (1);
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <p><a href="projects.html" class="btn back-btn">← Back to Projects</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year">2025</span> Narman david</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
